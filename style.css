@@ -1,0 +1,125 @@
+/* Basic Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+nav#toc {
+    position: sticky;
+    top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    height: fit-content;
+    font-family: 'Georgia', serif;
+    margin-right: 20px;
+}
+
+nav#toc h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+nav#toc ul {
+    list-style: none;
+}
+
+nav#toc ul li {
+    margin: 10px 0;
+}
+
+nav#toc ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav#toc ul li a:hover {
+    color: #4CAF50;
+}
+
+.content-area {
+    width: 70%;
+}
+
+h1, h2 {
+    cursor: pointer;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: #fff;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+h1:hover, h2:hover {
+    background-color: #45a049;
+}
+
+.content {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    display: none; /* Collapsed by default */
+}
+
+.content p {
+    font-size: 1.1em;
+    margin-bottom: 0;
+}
+
+/* Icon Rotation for Collapsing */
+h1 i, h2 i {
+    transition: transform 0.3s ease;
+}
+
+h1.collapsed i, h2.collapsed i {
+    transform: rotate(-180deg);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    nav#toc {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .content-area {
+        width: 100%;
+    }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journey in College</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #9face6);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            cursor: pointer;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        h1:hover {
+            background-color: #555;
+        }
+        .content {
+            display: none;
+            margin: 10px 0;
+            padding: 0;
+        }
+        ul {
+            margin: 0;
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .toc {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .toc a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 5px 0;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Table of Contents</h2>
+    <div class="toc">
+        <a href="#first-year">First Year</a>
+        <a href="#second-year">Second Year</a>
+        <a href="#third-year">Third Year (Current)</a>
+        <a href="#hobbies">Hobbies</a>
+    </div>
+
+    <h1 id="first-year">First Year <i class="fas fa-chevron-down"></i></h1>
+    <div class="content">
+        <ul>
+            <li>Learned the basics of programming with Python and C, focusing on problem-solving and fundamentals.</li>
+            <li>Completed small projects like a <b>Simple Calculator</b> and <b>Number Guessing Game</b> to practice coding logic.</li>
+            <li>Explored various domains starting with web developement</li>
+        </ul>
+    </div>
+
+    <h1 id="second-year">Second Year <i class="fas fa-chevron-down"></i></h1>
+    <div class="content">
+        <ul>
+            <li>Dived deeper into <b>Data Structures</b> and <b>Algorithms</b>, improving my problem-solving approach.</li>
+            <li>Worked on a project,<b>Swipe-write</b> developed a gesture-controlled collaborative whiteboard using python and ML.</li>
+            <li>Participated in coding competitions, which helped me enhance my skills in time-bound problem solving.</li>
+        </ul>
+    </div>
+
+    <h1 id="third-year">Third Year (Current) <i class="fas fa-chevron-down"></i></h1>
+    <div class="content">
+        <ul>
+            <li>Started working with <b>Machine Learning</b> and <b>Deep Learning</b> models using Python, TensorFlow, and scikit-learn.</li>
+            <li>Worked on a project in summer and participated in a few hackathons.</li>
+            <li>Currently learning backend development and enhancing my problem solving skills</li>
+        </ul>
+    </div>
+
+    <script>
+        document.querySelectorAll('h1').forEach(section => {
+            section.addEventListener('click', () => {
+                let content = section.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                    section.querySelector('i').classList.replace('fa-chevron-up', 'fa-chevron-down');
+                } else {
+                    content.style.display = "block";
+                    section.querySelector('i').classList.replace('fa-chevron-down', 'fa-chevron-up');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
